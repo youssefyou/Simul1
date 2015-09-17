@@ -3,6 +3,7 @@ title: "Simulation"
 author: "EL HAMADI Youssef"
 date: "Jeudi 17 septembre 2015"
 output: html_document
+keep_md: true
 ---
 
 Notre but ici est de réaliser un graphique qui montre l'évolution de quatre variables aléatoires qui suivent une loi normale centrée réduite.
