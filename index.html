@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simul1 by youssefyou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Simul1</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/youssefyou/Simul1" class="btn">View on GitHub</a>
+      <a href="https://github.com/youssefyou/Simul1/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/youssefyou/Simul1/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <hr>
+
+<p>title: "Simulation"
+author: "EL HAMADI Youssef"
+date: "Jeudi 17 septembre 2015"</p>
+
+<h2>
+<a id="output-slidy_presentation" class="anchor" href="#output-slidy_presentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>output: slidy_presentation</h2>
+
+<h2>
+<a id="simulation-des-variables-aléatoires" class="anchor" href="#simulation-des-variables-al%C3%A9atoires" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulation des variables aléatoires</h2>
+
+<p>Commençons d'abords par la création de notre jeu de données.</p>
+
+<div class="highlight highlight-source-r"><pre>set.seed(<span class="pl-c1">1</span>)
+<span class="pl-smi">newdata</span> <span class="pl-k">&lt;-</span> <span class="pl-k">data.frame</span>(<span class="pl-v">Var1</span><span class="pl-k">=</span> rnorm(<span class="pl-c1">40</span>), <span class="pl-v">Var2</span><span class="pl-k">=</span> rnorm(<span class="pl-c1">40</span>), <span class="pl-v">Var3</span><span class="pl-k">=</span> rnorm(<span class="pl-c1">40</span>),
+                      <span class="pl-v">Var4</span><span class="pl-k">=</span> rnorm(<span class="pl-c1">40</span>), <span class="pl-v">index</span><span class="pl-k">=</span><span class="pl-c1">1</span><span class="pl-k">:</span><span class="pl-c1">40</span>)</pre></div>
+
+<h2>
+<a id="représentation-avec-plot-r-base" class="anchor" href="#repr%C3%A9sentation-avec-plot-r-base" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentation avec plot R-base</h2>
+
+<p>La représentation graphique avec la fonction <em>plot</em> de R-base est comme suit:</p>
+
+<div class="highlight highlight-source-r"><pre>plot(<span class="pl-smi">newdata</span><span class="pl-k">$</span><span class="pl-smi">Var1</span>, <span class="pl-v">col</span><span class="pl-k">=</span><span class="pl-c1">1</span>, <span class="pl-v">ylim</span><span class="pl-k">=</span> c(<span class="pl-k">-</span><span class="pl-c1">2.5</span>, <span class="pl-c1">3</span>), <span class="pl-v">ylab</span><span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>value<span class="pl-pds">"</span></span>, <span class="pl-v">type</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>l<span class="pl-pds">"</span></span>, <span class="pl-v">lwd</span><span class="pl-k">=</span><span class="pl-c1">2</span>)
+lines(<span class="pl-smi">newdata</span><span class="pl-k">$</span><span class="pl-smi">Var2</span>, <span class="pl-v">col</span><span class="pl-k">=</span><span class="pl-c1">2</span>, <span class="pl-v">lwd</span><span class="pl-k">=</span><span class="pl-c1">2</span>)
+lines(<span class="pl-smi">newdata</span><span class="pl-k">$</span><span class="pl-smi">Var3</span>, <span class="pl-v">col</span><span class="pl-k">=</span><span class="pl-c1">3</span>, <span class="pl-v">lwd</span><span class="pl-k">=</span><span class="pl-c1">2</span>)
+lines(<span class="pl-smi">newdata</span><span class="pl-k">$</span><span class="pl-smi">Var4</span>, <span class="pl-v">col</span><span class="pl-k">=</span><span class="pl-c1">4</span>, <span class="pl-v">lwd</span><span class="pl-k">=</span><span class="pl-c1">2</span>)
+legend(<span class="pl-s"><span class="pl-pds">"</span>topright<span class="pl-pds">"</span></span>, <span class="pl-v">legend</span> <span class="pl-k">=</span> c(<span class="pl-s"><span class="pl-pds">"</span>var1<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>var2<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>var3<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>var4<span class="pl-pds">"</span></span>),
+       <span class="pl-v">col</span><span class="pl-k">=</span> <span class="pl-c1">1</span><span class="pl-k">:</span><span class="pl-c1">4</span>, <span class="pl-v">lwd</span><span class="pl-k">=</span><span class="pl-c1">2</span>,<span class="pl-v">ncol</span><span class="pl-k">=</span><span class="pl-c1">4</span>, <span class="pl-v">cex</span><span class="pl-k">=</span><span class="pl-c1">0.8</span>, <span class="pl-v">bty</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>n<span class="pl-pds">"</span></span>, <span class="pl-v">bg</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>white<span class="pl-pds">"</span></span>)</pre></div>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+<h2>
+<a id="transformation-avec-reshape2" class="anchor" href="#transformation-avec-reshape2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transformation avec reshape2</h2>
+
+<p>Si on veut obtenir un graphe d'une qualité supérieure on peut utiliser le package <em>ggplot2</em>. Pour réaliser notre graphe avec ce package nous allons d'abords transformé notre jeu de données à l'aide du package <em>reshape2</em>.</p>
+
+<div class="highlight highlight-source-r"><pre>library(<span class="pl-smi">reshape2</span>)
+<span class="pl-smi">Mnewdata</span> <span class="pl-k">&lt;-</span> melt(<span class="pl-smi">newdata</span>, <span class="pl-v">id</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>index<span class="pl-pds">"</span></span>)</pre></div>
+
+<h2>
+<a id="représentations-avec-ggplot2" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2</h2>
+
+<p>Enfin, ci- dessous quelques graphiques réalisés avec la fonction <em>ggplot</em>:</p>
+
+<div class="highlight highlight-source-r"><pre>library(<span class="pl-smi">ggplot2</span>)
+ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</span>, <span class="pl-smi">value</span>, <span class="pl-v">colour</span><span class="pl-k">=</span><span class="pl-smi">variable</span>)) <span class="pl-k">+</span>
+    geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
+    scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Spectral<span class="pl-pds">"</span></span>)</pre></div>
+
+<p><img src="assets/fig/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4"> </p>
+
+<h2>
+<a id="représentations-avec-ggplot2-2" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (2)</h2>
+
+<div class="highlight highlight-source-r"><pre>ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</span>, <span class="pl-smi">value</span>, <span class="pl-v">colour</span><span class="pl-k">=</span><span class="pl-smi">variable</span>)) <span class="pl-k">+</span>
+    geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
+    scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Spectral<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> theme_bw()</pre></div>
+
+<p><img src="assets/fig/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5"> </p>
+
+<h2>
+<a id="représentations-avec-ggplot2-3" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (3)</h2>
+
+<div class="highlight highlight-source-r"><pre>ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</span>, <span class="pl-smi">value</span>, <span class="pl-v">colour</span><span class="pl-k">=</span><span class="pl-smi">variable</span>)) <span class="pl-k">+</span>
+    geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
+    scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Set1<span class="pl-pds">"</span></span>)</pre></div>
+
+<p><img src="assets/fig/unnamed-chunk-6-1.png" alt="plot of chunk unnamed-chunk-6"> </p>
+
+<h2>
+<a id="représentations-avec-ggplot2-4" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (4)</h2>
+
+<div class="highlight highlight-source-r"><pre>ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</span>, <span class="pl-smi">value</span>, <span class="pl-v">colour</span><span class="pl-k">=</span><span class="pl-smi">variable</span>)) <span class="pl-k">+</span>
+    geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
+    scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Dark2<span class="pl-pds">"</span></span>)</pre></div>
+
+<p><img src="assets/fig/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7"> </p>
+
+<h2>
+<a id="représentations-avec-ggplot2-5" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (5)</h2>
+
+<div class="highlight highlight-source-r"><pre>ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</span>, <span class="pl-smi">value</span>, <span class="pl-v">colour</span><span class="pl-k">=</span><span class="pl-smi">variable</span>)) <span class="pl-k">+</span>
+    geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
+    scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Set1<span class="pl-pds">"</span></span>) <span class="pl-k">+</span>
+    theme_classic()</pre></div>
+
+<p><img src="assets/fig/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8"> </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/youssefyou/Simul1">Simul1</a> is maintained by <a href="https://github.com/youssefyou">youssefyou</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
