@@ -1,25 +1,36 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Simul1 by youssefyou</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Simul1</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/youssefyou/Simul1" class="btn">View on GitHub</a>
-      <a href="https://github.com/youssefyou/Simul1/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/youssefyou/Simul1/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Simul1</h1>
+        <p class="header"></p>
 
-    <section class="main-content">
-      <hr>
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/youssefyou/Simul1/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/youssefyou/Simul1/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/youssefyou/Simul1">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/youssefyou">youssefyou</a></p>
+
+
+      </header>
+      <section>
+        <hr>
 
 <p>title: "Simulation"
 author: "EL HAMADI Youssef"
@@ -49,7 +60,7 @@ lines(<span class="pl-smi">newdata</span><span class="pl-k">$</span><span class=
 legend(<span class="pl-s"><span class="pl-pds">"</span>topright<span class="pl-pds">"</span></span>, <span class="pl-v">legend</span> <span class="pl-k">=</span> c(<span class="pl-s"><span class="pl-pds">"</span>var1<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>var2<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>var3<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>var4<span class="pl-pds">"</span></span>),
        <span class="pl-v">col</span><span class="pl-k">=</span> <span class="pl-c1">1</span><span class="pl-k">:</span><span class="pl-c1">4</span>, <span class="pl-v">lwd</span><span class="pl-k">=</span><span class="pl-c1">2</span>,<span class="pl-v">ncol</span><span class="pl-k">=</span><span class="pl-c1">4</span>, <span class="pl-v">cex</span><span class="pl-k">=</span><span class="pl-c1">0.8</span>, <span class="pl-v">bty</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>n<span class="pl-pds">"</span></span>, <span class="pl-v">bg</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>white<span class="pl-pds">"</span></span>)</pre></div>
 
-<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+<p><img src="https://github.com/youssefyou/Simul1/blob/master/assets/fig/unnamed-chunk-2-1.png?raw=true" alt=""></p>
 
 <h2>
 <a id="transformation-avec-reshape2" class="anchor" href="#transformation-avec-reshape2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Transformation avec reshape2</h2>
@@ -69,7 +80,7 @@ ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</spa
     geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
     scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Spectral<span class="pl-pds">"</span></span>)</pre></div>
 
-<p><img src="assets/fig/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4"> </p>
+<p><img src="https://github.com/youssefyou/Simul1/blob/master/assets/fig/unnamed-chunk-4-1.png?raw=true" alt=""></p>
 
 <h2>
 <a id="représentations-avec-ggplot2-2" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (2)</h2>
@@ -78,7 +89,7 @@ ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</spa
     geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
     scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Spectral<span class="pl-pds">"</span></span>) <span class="pl-k">+</span> theme_bw()</pre></div>
 
-<p><img src="assets/fig/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5"> </p>
+<p><img src="https://github.com/youssefyou/Simul1/blob/master/assets/fig/unnamed-chunk-5-1.png?raw=true" alt=""></p>
 
 <h2>
 <a id="représentations-avec-ggplot2-3" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (3)</h2>
@@ -87,7 +98,7 @@ ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</spa
     geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
     scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Set1<span class="pl-pds">"</span></span>)</pre></div>
 
-<p><img src="assets/fig/unnamed-chunk-6-1.png" alt="plot of chunk unnamed-chunk-6"> </p>
+<p><img src="https://github.com/youssefyou/Simul1/blob/master/assets/fig/unnamed-chunk-6-1.png?raw=true" alt=""></p>
 
 <h2>
 <a id="représentations-avec-ggplot2-4" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (4)</h2>
@@ -96,7 +107,7 @@ ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</spa
     geom_line(<span class="pl-v">size</span><span class="pl-k">=</span><span class="pl-c1">1</span>) <span class="pl-k">+</span>
     scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Dark2<span class="pl-pds">"</span></span>)</pre></div>
 
-<p><img src="assets/fig/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7"> </p>
+<p><img src="https://github.com/youssefyou/Simul1/blob/master/assets/fig/unnamed-chunk-7-1.png?raw=true" alt=""></p>
 
 <h2>
 <a id="représentations-avec-ggplot2-5" class="anchor" href="#repr%C3%A9sentations-avec-ggplot2-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Représentations avec ggplot2 (5)</h2>
@@ -106,16 +117,13 @@ ggplot(<span class="pl-smi">Mnewdata</span>, aes(<span class="pl-smi">index</spa
     scale_color_brewer(<span class="pl-v">palette</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>Set1<span class="pl-pds">"</span></span>) <span class="pl-k">+</span>
     theme_classic()</pre></div>
 
-<p><img src="assets/fig/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8"> </p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/youssefyou/Simul1">Simul1</a> is maintained by <a href="https://github.com/youssefyou">youssefyou</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+<p><img src="https://github.com/youssefyou/Simul1/blob/master/assets/fig/unnamed-chunk-8-1.png?raw=true" alt=""></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
   </body>
 </html>
